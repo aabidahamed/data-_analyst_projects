@@ -1,0 +1,129 @@
+Scenario Explanation 
+A company called SkillUp Training Center conducts different technical training programs.
+They have trainers, courses, and the training sessions they conduct.
+
+To manage all the details, the company uses a database called TrainingDB.
+
+
+---
+
+Database Name: TrainingDB
+
+This database stores all information about:
+
+Trainers working in the company
+
+Courses offered
+
+Training sessions conducted by trainers
+
+
+
+TABLE DETAILS & PURPOSE
+
+
+---
+
+1️.Trainer Table
+
+Table Name: Trainer
+
+Purpose:
+
+Stores details of each trainer working in the training center.
+
+Fields:
+
+Column	Description
+
+TrainerID (PK)	Unique ID for each trainer 
+TrainerName	Name of the trainer
+Experience	Number of years of experience
+
+
+Example Data:
+
+TrainerID	TrainerName	Experience
+
+1	Arun	5
+2	Kavi	2
+3	Ravi	8
+4	Meera	3
+
+
+Why this table?
+
+To identify who is conducting the training and to filter trainers based on experience.
+
+
+---
+
+2️.Course Table
+
+Table Name: Course
+
+Purpose:
+
+Stores all courses offered by the training center.
+
+Fields:
+
+Column	Description
+
+CourseID (PK)	Unique ID for each course
+CourseName	Name of the course
+Level	Difficulty level (Beginner / Advanced)
+
+
+
+Why this table?
+
+This table helps understand which courses are beginner or advanced and for checking subqueries based on course level.
+
+
+---
+
+3️.Training Table
+
+Table Name: Training
+
+Purpose:
+
+Stores details of each training session (which trainer conducted which course and on what date).
+
+Fields:
+
+Column	Description
+
+TrainingID (PK)	Unique ID for each training session
+TrainerID (FK)	Trainer who conducted the session
+CourseID (FK)	Course that was taught
+TrainingDate	Date of training
+
+
+Why this table?
+
+This table links trainers with the courses they taught.
+It is the main table for subquery practice because it contains relationships between both Trainer and Course.
+
+
+
+1️.Find trainers whose experience is above average.
+
+2️.Find courses taught by the trainer with highest experience.
+
+3️.Find the trainer who conducted the latest training.
+
+4️.Count trainings for Python.
+
+5️.Find trainers who conducted training after March 2024.
+
+6️.Find all courses that have at least one training session.
+
+7️.Find earliest training session.
+
+8️.Find the course with maximum training sessions.
+
+9️.Find trainers who taught advanced courses.
+
+10.Find courses that are not beginner.
